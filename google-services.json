@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "412607859652",
+    "project_id": "hubvana-checkin",
+    "storage_bucket": "hubvana-checkin.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412607859652:android:b3adb3d6dca08d91d03291",
+        "android_client_info": {
+          "package_name": "com.accountablecoach.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412607859652-6b4nbohrreiqlt61522t2o9h68lrd0j0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPgb7ErTkEKOuc1Q1phchLGaXehaJUf0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412607859652-6b4nbohrreiqlt61522t2o9h68lrd0j0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
