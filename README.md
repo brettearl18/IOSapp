@@ -1,116 +1,71 @@
-# AccountableCoach – Automated Client Accountability Platform
+# AccountableCoach Mobile App
 
-## Overview
+A React Native mobile application for the AccountableCoach platform.
 
-**AccountableCoach** is a fully automated, AI-powered accountability app designed for health and fitness coaches. The platform allows coaches to manage their clients' progress, assign personalised goals, and deliver weekly check-ins. Clients receive dynamic prompts and AI-generated voice feedback to stay on track.
+## Features
 
-The system uses **Firebase** for backend infrastructure, **ElevenLabs** for voice feedback, and optional **OpenAI** for summarising client responses. This is a tiered SaaS platform with scalable pricing for coaches and teams of all sizes.
+- Client management
+- Goal tracking
+- Check-ins
+- Voice feedback
+- Progress monitoring
 
----
+## Getting Started
 
-## Tech Stack
+### Prerequisites
 
-| Layer         | Technology            |
-|---------------|------------------------|
-| Frontend      | React / React Native   |
-| Backend       | Firebase (Auth, Firestore, Functions) |
-| APIs          | ElevenLabs (Voice), OpenAI (Optional) |
-| Hosting       | Firebase Hosting / Vercel |
-| Auth          | Firebase Auth          |
-| Payments      | Stripe (Tiered Coach Plans) |
-| Notifications | Firebase Cloud Messaging |
+- Node.js (v14 or later)
+- npm or yarn
+- iOS development environment (Xcode)
+- CocoaPods
+- Expo CLI
 
----
+### Installation
 
-## User Roles
-
-### 1. **Coach**
-- Invite and manage clients
-- Assign goals
-- Review check-ins
-- View client progress
-- Trigger or customise AI voice feedback
-
-### 2. **Client**
-- Set or accept goals
-- Complete weekly check-ins (traffic light + notes)
-- Receive AI-generated voice summaries
-- Track streaks and progress
-
----
-
-## Key Features
-
-- **Weekly Check-Ins**: Dynamic, goal-based prompts clients fill in every 7 days
-- **Voice Feedback**: ElevenLabs-powered personalised replies after check-ins
-- **Goal Tracking**: Create, edit, complete, and review goals over time
-- **Coach Dashboard**: Overview of all clients and their accountability status
-- **Tiered Billing**: Subscription plans for solo coaches, growing teams, and enterprises
-- **Custom Templates**: Coaches can create reusable question packs for check-ins
-
----
-
-## File Structure (Core)
-
-```
-/src
-  /components
-  /pages
-  /hooks
-  /utils
-/firebase
-  /functions
-  /triggers
-/public
-README.md
-.env
+1. Clone the repository:
+```bash
+git clone https://github.com/brettearl18/IOSapp.git
+cd IOSapp
 ```
 
----
+2. Install dependencies:
+```bash
+npm install
+```
 
-## APIs Used
+3. Install iOS dependencies:
+```bash
+cd ios && pod install && cd ..
+```
 
-- **ElevenLabs API**
-  - Input: Summary text + voice type
-  - Output: MP3/Audio URL
-- **OpenAI API** (Optional)
-  - Input: Weekly check-in answers
-  - Output: Short-form summary for voice reply
+4. Start the development server:
+```bash
+npx expo start
+```
 
----
+### Development
 
-## Build Phases
+- Run on iOS simulator:
+```bash
+npx expo run:ios
+```
 
-### ✅ Phase 1 – MVP
-- Auth (Coach + Client)
-- Goal creation
-- Weekly check-in system
-- ElevenLabs voice integration
-- Coach dashboard (basic)
-- Stripe billing
+## Project Structure
 
-### 🔜 Phase 2
-- Coach branding & white label
-- Analytics dashboard
-- Group coaching support
-- Web & mobile sync
-- Habit tracking integrations (Apple Health, Google Fit)
-
----
+```
+src/
+├── api/          # API integration
+├── components/   # Reusable components
+├── config/       # Configuration files
+├── contexts/     # React contexts
+├── hooks/        # Custom hooks
+└── navigation/   # Navigation setup
+```
 
 ## Contributing
 
-Please fork the repo and submit PRs to the `dev` branch. Use conventional commits and maintain component reusability.
-
----
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
-MIT License
-
----
-
-## Contact
-
-Project by: [Brett & Team]  
-Contact: `hello@accountablecoach.app` 
+This project is licensed under the MIT License.
